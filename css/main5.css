@@ -44,9 +44,6 @@ body {
 #canvasContainer:hover {
 	opacity:1;
 }
-#canvasContainer:click {
-	opacity:1;
-}
 .drawingOutput {
     opacity: 0;
 	display:block;
