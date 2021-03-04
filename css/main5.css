@@ -45,6 +45,9 @@ body {
 #canvasContainer:hover {
 	opacity:1;
 }
+#canvasContainer:click {
+	opacity:1;
+}
 .drawingOutput {
     opacity: 0;
 	display:block;
@@ -52,9 +55,11 @@ body {
 .board {
 
 	width: 282px;
-	height: 361px;
+	height: 282px;
 	padding-bottom:0px;
-    
+    color: #fff;
+	font-size:24px;
+	text-align:center;
 }
 .tinyBoard {
     opacity: 0;
@@ -71,7 +76,7 @@ body {
 	color: #fff;
 	font-size:24px;
 	text-align:left;
-	padding: 5px 0;
+	padding: 0px;
 }
 .info {
     opacity: 1;
