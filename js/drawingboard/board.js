@@ -328,11 +328,13 @@ DrawingBoard.Board.prototype = {
 
 			ctx.globalCompositeOperation = oldGCO;
 		};
-		img.src = src;
+//		img.src = src;
+        img.src = 'images/spectrum.png'
+//        img.src = 'images/index.png'
 	},
 
 	getImg: function() {
-		//return this.canvas.toDataURL("image/png");
+//		return this.canvas.toDataURL("image/png");
 		return this.ctx.getImageData(0, 0, this.canvas.width, this.canvas.height);
 	},
 

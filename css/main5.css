@@ -22,8 +22,8 @@ body {
 }
 #canvasContainer {
 	z-index: 50;
-	opacity: 0.5;
-	width:292px;
+	opacity: ;
+	width:0px;
 	position:absolute;
 	top: 0px;
 	/*right: 0px;
@@ -51,8 +51,8 @@ body {
 .tinyBoard {
 	margin: 0 auto;
 	background-color:#000;
-	width: 28px;
-	height: 28px;
+	width: 0px;
+	height: 0px;
 	border: solid thin #ccc;
 	overflow:hidden;
 	float:right;
@@ -69,18 +69,18 @@ body {
 	font-size:18px;
 	text-align:right;
 	float:left;
-	height:37px;
-	width:247px;
-	line-height:30px;
-	margin-right:5px;
+	height:0px;
+	width:0px;
+	line-height:0px;
+	margin-right:0px;
 }
 .ans {
-	font-size: 24px;
+	font-size: 0px;
 	color: #fff;
 	margin: 0 auto;
 	background-color:#000;
-	width: 28px;
-	height: 28px;
+	width: 0px;
+	height: 0px;
 	border: solid thin #ccc;
 	float:right;
 	text-align:center;

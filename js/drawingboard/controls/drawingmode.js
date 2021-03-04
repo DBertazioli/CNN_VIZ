@@ -3,9 +3,9 @@ DrawingBoard.Control.DrawingMode = DrawingBoard.Control.extend({
 	name: 'drawingmode',
 
 	defaults: {
-		pencil: true,
-		eraser: true,
-		filler: true
+		pencil: false,
+		eraser: false,
+		filler: false
 	},
 
 	initialize: function() {

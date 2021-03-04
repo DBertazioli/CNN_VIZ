@@ -76,101 +76,24 @@
 	
 		<div id="canvasContainer"> <!--style="visibility: hidden">-->
 			<div id="drawingInterface">
-				<div class="instructions">Draw your number here</div>
+				<div class="instructions"> </div>
 				<div class="board" id="custom-board"></div>
 				<div class="drawingOutput">
 					<div class="row">
-						<div class="info">Downsampled drawing:</div>
+						<div class="info"> </div>
 						<div class="tinyBoard">				
 							<canvas id="tiny"></canvas>
 						</div>
 					</div>
 					<div class="row">				
-						<div class="info cell">First guess:</div>
+						<div class="info cell"> </div>
 						<div id="ans1" class="ans cell"></div>
 					</div>
 					<div class="row cell">					
-						<div class="info cell">Second guess:</div>
+						<div class="info cell"> </div>
 						<div id="ans2" class="ans cell"></div>
 					</div>
 				</div>
-			</div>
-			<div id="filterInterface">
-				<div class="instructions">Layer visibility</div>
-				<div class="settings">
-					<div class="row">
-					  <div class="question">
-						Input layer
-					  </div>
-					  <div class="switch">
-						<input id="input_hide_button" class="cmn-toggle cmn-toggle-yes-no" type="checkbox">
-						<label for="input_hide_button" data-on="Hide" data-off="Show"></label>
-					  </div>
-					</div><!-- /row -->
-					<div class="row">
-					  <div class="question">
-						Convolution layer 1
-					  </div>
-					  <div class="switch">
-						<input id="conv1_hide_button" class="cmn-toggle cmn-toggle-yes-no" type="checkbox">
-						<label for="conv1_hide_button" data-on="Hide" data-off="Show"></label>
-					  </div>
-					</div><!-- /row -->
-					<div class="row">
-					  <div class="question">
-						Downsampling layer 1
-					  </div>
-					  <div class="switch">
-						<input id="down1_hide_button" class="cmn-toggle cmn-toggle-yes-no" type="checkbox">
-						<label for="down1_hide_button" data-on="Hide" data-off="Show"></label>
-					  </div>
-					</div><!-- /row -->
-					<div class="row">
-					  <div class="question">
-						Convolution layer 2
-					  </div>
-					  <div class="switch">
-						<input id="conv2_hide_button" class="cmn-toggle cmn-toggle-yes-no" type="checkbox">
-						<label for="conv2_hide_button" data-on="Hide" data-off="Show"></label>
-					  </div>
-					</div><!-- /row -->
-					<div class="row">
-					  <div class="question">
-						Downsampling layer 2
-					  </div>
-					  <div class="switch">
-						<input id="down2_hide_button" class="cmn-toggle cmn-toggle-yes-no" type="checkbox">
-						<label for="down2_hide_button" data-on="Hide" data-off="Show"></label>
-					  </div>
-					</div><!-- /row -->
-					<div class="row">
-					  <div class="question">
-						Fully-connected layer 1
-					  </div>
-					  <div class="switch">
-						<input id="fc1_hide_button" class="cmn-toggle cmn-toggle-yes-no" type="checkbox">
-						<label for="fc1_hide_button" data-on="Hide" data-off="Show"></label>
-					  </div>
-					</div><!-- /row -->
-					<div class="row">
-					  <div class="question">
-						Fully-connected layer 2
-					  </div>
-					  <div class="switch">
-						<input id="fc2_hide_button" class="cmn-toggle cmn-toggle-yes-no" type="checkbox">
-						<label for="fc2_hide_button" data-on="Hide" data-off="Show"></label>
-					  </div>
-					</div><!-- /row -->
-					<div class="row">
-					  <div class="question">
-						Output layer
-					  </div>
-					  <div class="switch">
-						<input id="output_hide_button" class="cmn-toggle cmn-toggle-yes-no" type="checkbox">
-						<label for="output_hide_button" data-on="Hide" data-off="Show"></label>
-					  </div>
-					</div><!-- /row -->
-				</div>				
 			</div>
 		</div>
 		
@@ -204,7 +127,7 @@
 			var nHiddenNodes_2 = 100;
 			var nHiddenLayers = 2;
 			var nFinalNodes = 10;
-			var nNodes = nPixels + nConvNodes_1 + nConvNodes_1_down + nConvNodes_2 + nConvNodes_2_down + nHiddenNodes_1 + nHiddenNodes_2 + nFinalNodes;
+            var nNodes = nPixels + nConvNodes_1 + nConvNodes_1_down + nConvNodes_2 + nConvNodes_2_down + nHiddenNodes_1 + nHiddenNodes_2 + nFinalNodes;
 			console.log('nNodes = ' + nNodes);
 			var allNodeNums = new Array(nNodes);
 			var allNodeInputs = new Array(nNodes);
@@ -242,10 +165,11 @@
 			
 			//var offset = new THREE.Vector3( 10, 10, 10 );
 
-			var nums = "0 1 2 3 4 5 6 7 8 9",
+//			var nums = "0 1 2 3 4 5 6 7 8 9",
+            var nums = "COV+ --> COV- --> CTRL",
 				height = 1,
-				size = 9,
-				hover = 260,
+				size = 15,
+				hover = 270,
 
 				curveSegments = 8,
 				
@@ -261,14 +185,14 @@
 			var customBoard = new DrawingBoard.Board('custom-board', {
 				background: "#000",
 				color: "#fff",
-				size: 30,
+				size: 3,
 				controls: [
 					{ Navigation: { back: false, forward: false } },
 					{ DrawingMode: { filler: false } }
 				],
 				controlsPosition: "bottom right",
 				webStorage: 'session',
-				droppable: false
+				droppable: true
 			});
 			
 			var tinyCtx = $("#tiny")[0].getContext("2d");
