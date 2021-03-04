@@ -329,8 +329,8 @@ DrawingBoard.Board.prototype = {
 			ctx.globalCompositeOperation = oldGCO;
 		};
 //		img.src = src;
-        img.src = 'images/spectrum.png'
-//        img.src = 'images/index.png'
+//        img.src = 'images/spectrum.png'
+        img.src = 'https://raw.githubusercontent.com/DBertazioli/CNN_VIZ/master/images/spectrum.png'
 	},
 
 	getImg: function() {
