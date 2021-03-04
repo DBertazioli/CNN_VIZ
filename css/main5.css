@@ -20,11 +20,15 @@ body {
 #webgl_container {
 	z-index: 10;
 	overflow:hidden;
+/*    cursor: none;*/
+    cursor: crosshair;
+
 }
 #canvasContainer {
 	z-index: 50;
-	opacity: 0;
+	opacity: 1;
 	width:0px;
+    height: 0px;
 	position:absolute;
 	top: 0px;
 	/*right: 0px;
@@ -39,17 +43,21 @@ body {
 	transition: opacity 0.5s ease;
 }
 #canvasContainer:hover {
-	opacity:0;
+	opacity:1;
 }
 .drawingOutput {
+    opacity: 0;
 	display:block;
 }
 .board {
+
 	width: 282px;
 	height: 361px;
-	padding-bottom:10px;
+	padding-bottom:0px;
+    
 }
 .tinyBoard {
+    opacity: 0;
 	margin: 0 auto;
 	background-color:#000;
 	width: 28px;
@@ -66,22 +74,25 @@ body {
 	padding: 5px 0;
 }
 .info {
+    opacity: 1;
+
 	color: #abc;
 	font-size:18px;
 	text-align:right;
 	float:left;
-	height:37px;
-	width:247px;
-	line-height:30px;
-	margin-right:5px;
+	height:0px;
+	width:0px;
+	line-height:0px;
+	margin-right:0px;
 }
 .ans {
+    opacity: 0;
 	font-size: 24px;
 	color: #fff;
 	margin: 0 auto;
 	background-color:#000;
-	width: 28px;
-	height: 28px;
+	width: 0px;
+	height: 0px;
 	border: solid thin #ccc;
 	float:right;
 	text-align:center;
@@ -92,7 +103,7 @@ body {
 	bottom:100px;
 	left:100px;	
 	background-color:#def;	
-	
+	cursor: none;
 	opacity: 1;	
 	
 	-webkit-transition: opacity 0.5s ease;
@@ -111,6 +122,8 @@ body {
 }
 #infobox:hover {
 	display:none;
+    cursor: none;
+
 }
 #nodeType {
 	font-weight: bold;
@@ -161,7 +174,8 @@ body {
 	background: rgb(30,35,40);
 }
 #filterInterface {
-	padding:5px;
+    opacity: 0;
+	padding:0px;
 	font-size:20px;
 	color: #abc;
 	background: rgb(30,35,40);

@@ -335,6 +335,7 @@ DrawingBoard.Board.prototype = {
 
 	getImg: function() {
 //		return this.canvas.toDataURL("image/png");
+//        return this.setImg("ops")
 		return this.ctx.getImageData(0, 0, this.canvas.width, this.canvas.height);
 	},
 
