@@ -3,14 +3,15 @@ html, body {
 }
 body {
 	font-family: Arial;
-	background-color: #222222;
+/*	background-color: #222222;*/
+    background-color: #808080
 	background: rgb(60,100,140); /* Old browsers */
 	background: -moz-radial-gradient(center, ellipse cover,  rgba(60,100,140,1) 0%, rgba(30,30,30,1) 100%); /* FF3.6+ */
 	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(60,100,140,1)), color-stop(100%,rgba(30,30,30,1))); /* Chrome,Safari4+ */
 	background: -webkit-radial-gradient(center, ellipse cover,  rgba(60,100,140,1) 0%,rgba(30,30,30,1) 100%); /* Chrome10+,Safari5.1+ */
 	background: -o-radial-gradient(center, ellipse cover,  rgba(60,100,140,1) 0%,rgba(30,30,30,1) 100%); /* Opera 12+ */
 	background: -ms-radial-gradient(center, ellipse cover,  rgba(60,100,140,1) 0%,rgba(30,30,30,1) 100%); /* IE10+ */
-	background: radial-gradient(ellipse at center,  rgba(60,100,140,1) 0%,rgba(30,30,30,1) 100%); /* W3C */
+	background: radial-gradient(ellipse at center,  rgba(80,100,140,1) 0%,rgba(30,30,30,1) 100%); /* W3C */
 
 	margin: 0;
 	font-family: Arial;
@@ -22,7 +23,7 @@ body {
 }
 #canvasContainer {
 	z-index: 50;
-	opacity: ;
+	opacity: 0;
 	width:0px;
 	position:absolute;
 	top: 0px;
@@ -38,7 +39,7 @@ body {
 	transition: opacity 0.5s ease;
 }
 #canvasContainer:hover {
-	opacity:1;
+	opacity:0;
 }
 .drawingOutput {
 	display:block;
@@ -51,8 +52,8 @@ body {
 .tinyBoard {
 	margin: 0 auto;
 	background-color:#000;
-	width: 0px;
-	height: 0px;
+	width: 28px;
+	height: 28px;
 	border: solid thin #ccc;
 	overflow:hidden;
 	float:right;
@@ -69,18 +70,18 @@ body {
 	font-size:18px;
 	text-align:right;
 	float:left;
-	height:0px;
-	width:0px;
-	line-height:0px;
-	margin-right:0px;
+	height:37px;
+	width:247px;
+	line-height:30px;
+	margin-right:5px;
 }
 .ans {
-	font-size: 0px;
+	font-size: 24px;
 	color: #fff;
 	margin: 0 auto;
 	background-color:#000;
-	width: 0px;
-	height: 0px;
+	width: 28px;
+	height: 28px;
 	border: solid thin #ccc;
 	float:right;
 	text-align:center;
