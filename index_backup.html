@@ -701,7 +701,7 @@
 										}
 										v = conv_weights_1a[filterNum][ro][co];
 										colorNum = math.round(v*99);
-										rw = redLookup[colorNum];
+										rw = 0;
 										gw = greenLookup[colorNum];
 										bw = blueLookup[colorNum];
 										
@@ -744,7 +744,7 @@
 											}
 											v=1;
 											colorNum = math.round(v*99);
-											rw = redLookup[colorNum];										
+											rw = 0;										
 											gw = greenLookup[colorNum];
 											bw = blueLookup[colorNum];
 											
@@ -789,7 +789,7 @@
 											}
 											v = conv_weights_2a[filterNum][filterNum_below][ro][co];
 											colorNum = math.round(v*99);
-											rw = redLookup[colorNum];
+											rw = 0;
 											gw = greenLookup[colorNum];
 											bw = blueLookup[colorNum];
 											
@@ -832,7 +832,7 @@
 											}
 											v=1;
 											colorNum = math.round(v*99);
-											rw = redLookup[colorNum];										
+											rw = 0;										
 											gw = greenLookup[colorNum];
 											bw = blueLookup[colorNum];
 											
@@ -869,7 +869,7 @@
 									}
 									v = hidden_weights_1a[allNodeNums[ind]-1][allNodeNums[ind_below]-1];
 									colorNum = math.round(v*99);
-									rw = redLookup[colorNum];
+									rw = 0;
 									gw = greenLookup[colorNum];
 									bw = blueLookup[colorNum];
 									
@@ -902,7 +902,7 @@
 									}
 									v = hidden_weights_2a[allNodeNums[ind]-1][allNodeNums[ind_below]-1];
 									colorNum = math.round(v*99);
-									rw = redLookup[colorNum];
+									rw = 0;
 									gw = greenLookup[colorNum];
 									bw = blueLookup[colorNum];
 									
@@ -935,7 +935,7 @@
 									}
 									v = final_weightsa[allNodeNums[ind]-1][allNodeNums[ind_below]-1];
 									colorNum = math.round(v*99);
-									rw = redLookup[colorNum];
+									rw = 0;
 									gw = greenLookup[colorNum];
 									bw = blueLookup[colorNum];
 									
@@ -1205,7 +1205,7 @@
 				document.getElementById("nodeOutput").textContent=str;
 				v = allNodeOutputs[interID];
 				colorNum = math.round(v*99);
-				r = math.round(redLookup[colorNum]*255);
+				r=0;
 				g = math.round(greenLookup[colorNum]*255);
 				b = math.round(blueLookup[colorNum]*255);
 				var bkgStr = "rgb(" + r + "," + g + "," + b + ")";
@@ -1262,7 +1262,7 @@
 						for (j=0;j<filterSize_1;j++){
 							weight = conv_nodes[0][filterNum].e(i+1,j+1);
 							colorNum = math.round(conv_weights_1a[filterNum][i][j]*99);
-							r = math.round(redLookup[colorNum]*255);
+							r=0;
 							g = math.round(greenLookup[colorNum]*255);
 							b = math.round(blueLookup[colorNum]*255);
 							filterCtx.fillStyle = "rgba(" + r + "," + g + "," + b + ", 1.0";
@@ -1281,7 +1281,7 @@
 						var col_below = math.floor(temp_below/32);
 						if (row_below > row-1 && row_below < row + 5 && col_below > col-1 && col_below < col + 5) {
 							colorNum = math.round(allNodeOutputs[ind_below]*99);
-							r = math.round(redLookup[colorNum]*255);
+							r=0;
 							g = math.round(greenLookup[colorNum]*255);
 							b = math.round(blueLookup[colorNum]*255);
 							inputCtx.fillStyle = "rgba(" + r + "," + g + "," + b + ", 1.0";
@@ -1308,7 +1308,7 @@
 								for (j=0;j<filterSize_1;j++){
 									weight = conv_nodes[1][filterNum][keeperCount].e(i+1,j+1);
 									colorNum = math.round(conv_weights_2a[filterNum][f][i][j]*99);									
-									r = math.round(redLookup[colorNum]*255);
+									r=0;
 									g = math.round(greenLookup[colorNum]*255);
 									b = math.round(blueLookup[colorNum]*255);
 									filterCtx.fillStyle = "rgba(" + r + "," + g + "," + b + ", 1.0";

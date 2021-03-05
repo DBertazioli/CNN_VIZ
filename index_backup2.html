@@ -701,7 +701,7 @@
 										}
 										v = conv_weights_1a[filterNum][ro][co];
 										colorNum = math.round(v*99);
-										rw = redLookup[colorNum];
+										rw = 0;
 										gw = greenLookup[colorNum];
 										bw = blueLookup[colorNum];
 										
@@ -744,7 +744,7 @@
 											}
 											v=1;
 											colorNum = math.round(v*99);
-											rw = redLookup[colorNum];										
+											rw = 0;										
 											gw = greenLookup[colorNum];
 											bw = blueLookup[colorNum];
 											
@@ -789,7 +789,7 @@
 											}
 											v = conv_weights_2a[filterNum][filterNum_below][ro][co];
 											colorNum = math.round(v*99);
-											rw = redLookup[colorNum];
+											rw = 0;
 											gw = greenLookup[colorNum];
 											bw = blueLookup[colorNum];
 											
@@ -832,7 +832,7 @@
 											}
 											v=1;
 											colorNum = math.round(v*99);
-											rw = redLookup[colorNum];										
+											rw = 0;										
 											gw = greenLookup[colorNum];
 											bw = blueLookup[colorNum];
 											
@@ -869,7 +869,7 @@
 									}
 									v = hidden_weights_1a[allNodeNums[ind]-1][allNodeNums[ind_below]-1];
 									colorNum = math.round(v*99);
-									rw = redLookup[colorNum];
+									rw = 0;
 									gw = greenLookup[colorNum];
 									bw = blueLookup[colorNum];
 									
@@ -902,7 +902,7 @@
 									}
 									v = hidden_weights_2a[allNodeNums[ind]-1][allNodeNums[ind_below]-1];
 									colorNum = math.round(v*99);
-									rw = redLookup[colorNum];
+									rw = 0;
 									gw = greenLookup[colorNum];
 									bw = blueLookup[colorNum];
 									
@@ -935,7 +935,7 @@
 									}
 									v = final_weightsa[allNodeNums[ind]-1][allNodeNums[ind_below]-1];
 									colorNum = math.round(v*99);
-									rw = redLookup[colorNum];
+									rw = 0;
 									gw = greenLookup[colorNum];
 									bw = blueLookup[colorNum];
 									

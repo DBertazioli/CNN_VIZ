@@ -99,7 +99,7 @@ body {
 	text-align:center;
 }
 #infobox {
-	width:300px;
+	width:400px;
 	position:absolute;
 	bottom:100px;
 	left:100px;	
@@ -141,7 +141,8 @@ body {
 	background-color:#bcd;
 	padding: 5px;
 }
-#calcContainer {	
+#calcContainer {
+    opacity: 0;
 	background-color:#9ab;
 	padding: 5px;
 }
